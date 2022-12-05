@@ -2,6 +2,7 @@
   <div>
     <nuxt-link :to="localePath('/')">Home</nuxt-link>
     <nuxt-link :to="localePath('/about')">about</nuxt-link>
+    <nuxt-link :to="localePath('/swipers')">swipers</nuxt-link>
     <nuxt-link :to="switchLocalePath('fr')">Français</nuxt-link>
     <nuxt-link :to="switchLocalePath('es')">es</nuxt-link>
     <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>

@@ -31,7 +31,7 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     "bootstrap-vue/nuxt",
     "@nuxtjs/i18n",
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
   ],
   axios: { baseURL: "https://plaza.choopon.uz/api" },
   i18n: {
@@ -62,7 +62,17 @@ export default {
       },
     },
   },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    // fix to work with swiperjs 8 - need to run with standalone:true. That can make some troubles.
+    standalone: true,
+    extend(config, ctx) {
+      // fix to work with swiperjs 8 add needed deps. you can get them from error when doing nuxt generate
+      config.externals = [
+        {
+          encoding: 'encoding',
+        },
+      ]
+    },
+  },
 };

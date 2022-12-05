@@ -1,13 +1,13 @@
 <template>
   <div class="homepage">
     <h1>{{ $t("welcometo") }}</h1>
-    <a href="#">wewew</a>
   </div>
 </template>
 
 <script>
 export default {
   name: "IndexPage",
+
   head: {
     css: ["~/assets/css/main"],
   },
@@ -18,11 +18,12 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped >
- @import "@/assets/css/main.css"; 
- .homepage h1 {
+<style lang="scss" scoped>
+// @import "@/assets/css/main.css";
+// @import "@/assets/css/swiper.css";
+.homepage h1 {
   &:hover {
     color: green;
   }
- }
+}
 </style>
